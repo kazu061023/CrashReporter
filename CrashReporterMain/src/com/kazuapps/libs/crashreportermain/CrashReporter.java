@@ -45,7 +45,7 @@ public class CrashReporter implements UncaughtExceptionHandler{
 
 	/**
 	 * クラッシュレポーターの起動
-	 * @param context ApplicationContext
+	 * @param context Context
 	 * @param mailApp Gmailアプリで送信する場合はtrueにする
 	 * @param userMessage ユーザーからのメッセージダイアログの表示を行うか？
 	 */

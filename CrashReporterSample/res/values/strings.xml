@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CrashReportSample</string>
+    <string name="btn_crash_txt">CrashButton!</string>
+
+    
+    <!-- ダイアログの文章等を変えたい場合は、下のようにすることで変更できます。 -->
+    
+    <!-- クラッシュレポートのダイアログタイトル -->
+    <!-- <string name="crashReportDialogTitle">クラッシュレポーター</string> -->
+    
+    <!-- クラッシュレポートのダイアログメッセージ -->
+    <!-- <string name="crashReportDialogMessage">この度はアプリの強制停止によりご迷惑をお掛けしてしまい、大変申し訳ございません。\nお手数お掛けしますが、強制停止時のレポートを送信していただきたく思います。</string> -->
+    
+    <!-- 送信ボタン -->
+    <!-- <string name="crashReportSend">レポートを送る</string> -->
+    
+    <!-- キャンセルボタン -->
+    <!-- <string name="crashReportSendCancel">キャンセル</string> -->
+    
+    <!-- ユーザーからのメッセージダイアログのタイトル -->
+    <!-- <string name="crashReportMessageTitle">クラッシュに関する追加の情報</string> -->
+    
+    <!-- ユーザーからのメッセージダイアログのヒント -->
+    <!-- <string name="crashReportMessageHint">大変お手数お掛けしますが、どのような操作を行った際に強制停止したかのご記入をお願い致します。\n\nご記入いただくことにより、迅速にこの不具合を対応することができます。</string> -->
+    
+    <!-- ユーザーメッセージに記載があった場合に1行目に表示するテキスト -->
+    <!-- <string name="crashReportUserMessageText">ユーザーからのメッセージ</string> -->
+    
+    <!-- テキストファイルからエラーの情報が取得が出来なかったとき用のテキスト -->
+    <!-- <string name="crashReportMessageGetError">エラー情報のファイルが取得できなかったため、クラッシュレポートは送信されませんでした。</string> -->
+    
+    <!-- 開発者に送信されるメールのタイトル(%sは日時) -->
+    <!-- <string name="crashReportTitle">クラッシュレポート: %s</string> -->
+    
+    <!-- 送信中のテキスト -->
+    <!-- <string name="crashReportMessageSending">レポートを送信しています。\nしばらくお待ちください。</string> -->
+</resources>

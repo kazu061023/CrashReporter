@@ -1,0 +1,31 @@
+<resources>
+    <!-- クラッシュレポートのダイアログタイトル -->
+    <string name="crashReportDialogTitle">クラッシュレポーター</string>
+    
+    <!-- クラッシュレポートのダイアログメッセージ -->
+    <string name="crashReportDialogMessage">前回発生したクラッシュレポートが存在します。\n開発者にレポートを送信しますか？</string>
+    
+    <!-- 送信ボタン -->
+    <string name="crashReportSend">送信</string>
+    
+    <!-- キャンセルボタン -->
+    <string name="crashReportSendCancel">キャンセル</string>
+    
+    <!-- ユーザーからのメッセージダイアログのタイトル -->
+    <string name="crashReportMessageTitle">クラッシュに関する追加の情報</string>
+    
+    <!-- ユーザーからのメッセージダイアログのヒント -->
+    <string name="crashReportMessageHint">大変お手数お掛けしますが、どのような操作を行った際に強制停止したかのご記入をお願い致します。\n\nご記入いただくことにより、迅速にこの不具合を対応することができます。</string>
+    
+    <!-- ユーザーメッセージに記載があった場合に1行目に表示するテキスト -->
+    <string name="crashReportUserMessageText">ユーザーからのメッセージ</string>
+    
+    <!-- テキストファイルからエラーの情報が取得が出来なかった時のテキスト -->
+    <string name="crashReportMessageGetError">エラー情報のファイルが取得できなかったため、クラッシュレポートは送信されませんでした。</string>
+    
+    <!-- 開発者に送信されるメールのタイトル(%sは日時) -->
+    <string name="crashReportTitle">クラッシュレポート: %s</string>
+    
+    <!-- 送信中のテキスト -->
+    <string name="crashReportMessageSending">レポートの送信中です</string>
+</resources>

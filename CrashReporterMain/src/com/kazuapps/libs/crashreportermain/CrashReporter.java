@@ -34,6 +34,8 @@ public class CrashReporter implements UncaughtExceptionHandler{
 
 	/** レポートのファイル名	 */
 	private static final String REPORT_FILENAME = "CrashReport.txt";
+	/** サーバーのURL */
+	private static final String SERVER_URL = "ここにCrashReporter.phpのURLを入れる";
 	/** レポートの送信元 */
 	private static final String MAILADDRESS_FROM = "hogehoge@example.com";
 	/** レポートの送信先 */
@@ -165,7 +167,7 @@ public class CrashReporter implements UncaughtExceptionHandler{
 			 * 送信元メールアドレス
 			 */
 
-			task.execute("http://smt-android.info/android/labs/crashReport/CrashReporter.php",
+			task.execute(SERVER_URL,
 					MAILADDRESS_TO,
 					t._0,
 					sb.toString(),

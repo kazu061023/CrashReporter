@@ -49,7 +49,7 @@ public class CrashReporter implements UncaughtExceptionHandler{
 	 * クラッシュレポーターの起動
 	 * @param context Context
 	 * @param mailApp Gmailアプリで送信する場合はtrueにする
-	 * @param userMessage ユーザーからのメッセージダイアログの表示を行うか？
+	 * @param userMessage ユーザーからのメッセージダイアログの表示を行うか
 	 */
 	public static void launch(Context context, boolean mailApp, boolean userMessage){
 		sContext = context;
@@ -147,7 +147,7 @@ public class CrashReporter implements UncaughtExceptionHandler{
 
 		T<String, String> t = createMessage();
 
-		/** クラッシュレポートがnullになっている場合は、テキストファイルを正常に読み込めていないため、送信を行わない */
+		// クラッシュレポートがnullになっている場合は、テキストファイルを正常に読み込めていないため、送信を行わない
 		if(t._1 == null){
 			Toast.makeText(sContext, sContext.getResources().getString(R.string.crashReportMessageGetError), Toast.LENGTH_SHORT).show();
 			return;
@@ -255,7 +255,7 @@ public class CrashReporter implements UncaughtExceptionHandler{
 			writer.println("[DeviceInfo]");
 			((ActivityManager)sContext.getSystemService(Context.ACTIVITY_SERVICE)).getMemoryInfo(sMemInfo);
 
-			// デバイス名
+			// デバイスの情報
 			writer.println("DeviceName: " + Build.DEVICE);
 			writer.println("ModelName: " + Build.MODEL);
 			writer.println("OSVersion: " + "Android " + Build.VERSION.RELEASE + "(" +  Build.VERSION.SDK_INT + ")");
@@ -274,13 +274,16 @@ public class CrashReporter implements UncaughtExceptionHandler{
 		handler.uncaughtException(thread, ex);
 	}
 
+	/**
+	 * 参考URL: http://blog.shonanshachu.com/2012/11/android_27.html
+	 * @return メモリサイズ
+	 */
 	private long getTotalMemorySize() {
 		try {
 			Process process = Runtime.getRuntime().exec("cat /proc/meminfo");
 			BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()), 1024);
 			String line = null;
 			while ((line = br.readLine()) != null) {
-				// "totalMemTotal:         xxxxxxx kB"の部分だけ抜き出す
 				if (line.contains("MemTotal:")) {
 					line = line.replaceAll("\\D+", "");
 					return Long.parseLong(line) / 1024;
